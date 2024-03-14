@@ -1,0 +1,19 @@
+.card_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.center_container{
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}

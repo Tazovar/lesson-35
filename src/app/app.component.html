@@ -1,0 +1,26 @@
+<div class="form_container">
+    <app-form (cardObjectEmitter)="cardObjectEmitterSubscriber($event)"></app-form>
+</div>
+
+
+
+<div class="filter_input_container">
+    <app-filter-input (searchEmitter)="searchEmitterSubscirber($event)"></app-filter-input>
+</div>
+<div class="card_container">
+    <div class="center_container">
+        <ng-container *ngIf="cardsArray.length > 0">
+            <ng-container *ngFor="let card of cardsArray">
+                <app-card [card]="card"></app-card>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+
+
+<ng-container *ngIf="cardsArray.length == 0">
+<div class="not_found_container">
+    <app-card-not-found></app-card-not-found>
+</div>
+</ng-container>
